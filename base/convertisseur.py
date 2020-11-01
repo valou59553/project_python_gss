@@ -19,7 +19,8 @@ def convert_and_create_static_site():
             <head>
                 <meta charset="utf-8">
                 <title>Titre de la page</title>
-                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="main.css">
+                <link rel="stylesheet" href="codehilite.css">
             </head>
             <body>
                 %s
