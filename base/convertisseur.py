@@ -19,8 +19,8 @@ def convert_and_create_static_site():
             <head>
                 <meta charset="utf-8">
                 <title>Titre de la page</title>
-                <link rel="stylesheet" href="main.css">
-                <link rel="stylesheet" href="codehilite.css">
+                <link rel="stylesheet" href="assets/css/main.css">
+                <link rel="stylesheet" href="assets/css/hilite.css">
             </head>
             <body>
                 %s
@@ -33,11 +33,13 @@ def convert_and_create_static_site():
         os.mkdir('../%s'%(sys.argv[2]))
         with open('../%s/site.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
             record.write(fichier_html)
-        with open('../%s/hilite.css'%(sys.argv[2]),'w') as record:
+        os.mkdir('../%s/assets'%(sys.argv[2]))
+        os.mkdir('../%s/assets/css'%(sys.argv[2]))
+        with open('../%s/assets/css/hilite.css'%(sys.argv[2]),'w') as record:
             record.write(hilite_css)
-        with open('../%s/main.css'%(sys.argv[2]),'w') as record:
+        with open('../%s/assets/css/main.css'%(sys.argv[2]),'w') as record:
             record.write(main_css)
-        with open('../%s/fontawesome-all.min.css'%(sys.argv[2]),'w') as record:
+        with open('../%s/assets/css/fontawesome-all.min.css'%(sys.argv[2]),'w') as record:
             record.write(font_css)
     except OSError as e:
         print(os.strerror(e.errno))
