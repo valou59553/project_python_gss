@@ -1,17 +1,34 @@
+<div id="page-wrapper" markdown="1">
+<section id="header" markdown="1">
+
 [Dopetrope](index.html)
 =======================
 
+<nav id="nav" markdown="1">
+<ul markdown="1">
+
 -   [Home](index.html)
 -   [Dropdown](#)
-    -   [Lorem ipsum dolor](#)
-    -   [Magna phasellus](#)
-    -   [Veroeros feugiat](#)
 -   [Left Sidebar](left-sidebar.html)
+
+</ul>
+</nav>
+
+<section id="banner" markdown="1">
+<header markdown="1">
 
 Howdy. This is Dopetrope.
 -------------------------
 
 A responsive template by HTML5 UP
+
+</header>
+</section>
+
+<section id="intro" class="container" markdown="1">
+<div class="row" markdown="1">
+<div class="col-4 col-12-medium" markdown="1">
+<section class="first" markdown="1">
 
 **
 
@@ -21,6 +38,11 @@ Ipsum consequat
 Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et
 magna tempus.
 
+</section>
+</div>
+<div class="col-4 col-12-medium" markdown="1">
+<section class="middle" markdown="1">
+
 **
 
 Magna etiam dolor
@@ -28,6 +50,11 @@ Magna etiam dolor
 
 Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et
 magna tempus.
+
+</section>
+</div>
+<div class="col-4 col-12-medium" markdown="1">
+<section class="last" markdown="1">
 
 **
 
@@ -37,81 +64,143 @@ Tempus adipiscing
 Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et
 magna tempus.
 
+</section>
+</div>
+</div>
+<footer>
+
+<ul class="actions" markdown="1">
+
 -   [Get Started](#)
 -   [Learn More](#)
+
+</ul>
+
+</footer>
+</section>
+</section>
+
+<!-- Main part -->
+
+<section id="main" markdown="1">
+<div class="container" markdown="1">
+<div class="row" markdown="1">
+<div class="col-12" markdown="1">
+
+<!-- portefolio -->
+<section markdown="1">
+<header class="major" markdown="1">
 
 My Portfolio
 ------------
 
+</header>
+<div class="row" markdown="1">
+<div class="col-4 col-6-medium col-12-small" markdown="1">
+<section class="box" markdown="1">
+
 [![](images/pic02.jpg)](#)
+
+<header markdown="1">
 
 ### Ipsum feugiat et dolor
 
+</header>
+
 Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
 veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
 ipsum lorem dolore.
 
+<footer markdown="1">
+<ul class="actions" markdown="1">
+
 -   [Find out more](#)
+
+</ul>
+</footer>
+</section>
+</div>
+
+<div class="col-4 col-6-medium col-12-small" markdown="1">
+<section class="box" markdown="1">
 
 [![](images/pic03.jpg)](#)
 
+<header markdown="1">
+
 ### Sed etiam lorem nulla
+
+</header>
 
 Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
 veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
 ipsum lorem dolore.
 
+<footer markdown="1">
+<ul class="actions" markdown="1">
+
 -   [Find out more](#)
+
+</ul>
+</footer>
+</section>
+</div>
+
+<div class="col-4 col-6-medium col-12-small" markdown="1">
+<section class="box" markdown="1">
 
 [![](images/pic04.jpg)](#)
 
+<header markdown="1">
+
 ### Consequat et tempus
 
-Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
-veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
-ipsum lorem dolore.
-
--   [Find out more](#)
-
-[![](images/pic05.jpg)](#)
-
-### Blandit sed adipiscing
+</header>
 
 Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
 veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
 ipsum lorem dolore.
 
--   [Find out more](#)
-
-[![](images/pic06.jpg)](#)
-
-### Etiam nisl consequat
-
-Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
-veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
-ipsum lorem dolore.
+<footer markdown="1">
+<ul class="actions" markdown="1">
 
 -   [Find out more](#)
 
-[![](images/pic07.jpg)](#)
+</ul>
+</footer>
+</section>
 
-### Dolore nisl feugiat
+</div>
+</div>
+</section>
+</div>
 
-Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat
-veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore
-ipsum lorem dolore.
 
--   [Find out more](#)
+<div class="col-12" markdown="1">
+<section markdown="1">
+<header class="major" markdown="1">
 
 The Blog
 --------
 
+</header>
+<div class="row" markdown="1">
+<div class="col-6 col-12-small" markdown="1">
+<section class="box" markdown="1">
+
 [![](images/pic08.jpg)](#)
+
+<header markdown="1">
 
 ### Magna tempus consequat
 
 Posted 45 minutes ago
 
+</header>
+
+</footer markdown="1">
+<ul class="actions" markdown="1">
+
 Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed
 veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit,
 tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna
@@ -121,23 +210,64 @@ conubia nostra, per inceptos lorem ipsum dolor sit amet.
 -   [Continue Reading](#)
 -   [33 comments](#)
 
+</ul>
+</footer>
+</section>
+</div>
+
+<div class="col-6 col-12-small" markdown="1">
+<section class="box" markdown="1">
+
 [![](images/pic09.jpg)](#)
+
+<header markdown="1">
 
 ### Aptent veroeros aliquam
 
 Posted 45 minutes ago
 
+</header>
+
 Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed
 veroeros lorem et blandit adipiscing feugiat phasellus tempus hendrerit,
 tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna
 felis nec elit. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos lorem ipsum dolor sit amet.
 
+</footer markdown="1">
+<ul class="actions" markdown="1">
+
 -   [Continue Reading](#)
 -   [33 comments](#)
 
+</ul>
+</footer>
+
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+
+<!-- footer -->
+<!-- footer -->
+<!-- footer -->
+<!-- footer -->
+<!-- footer -->
+
+<section id="footer" markdown="1">
+<div class="container" markdown="1">
+<div class="row" markdown="1">
+<div class="col-8 col-12-medium" markdown="1">
+<section markdown="1">
+<header markdown="1">
+
 Blandit nisl adipiscing
 -----------------------
+
+</header>
+<ul class="dates" markdown="1">
 
 -   Jan **27**
 
@@ -174,8 +304,18 @@ Blandit nisl adipiscing
     Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor
     sit amet dolore.
 
+</ul>
+</section>
+</div>
+
+<div class="col-4 col-12-medium" markdown="1">
+<section mardkdown="1">
+<header markdown="1">
+
 What's this all about?
 ----------------------
+
+</header>
 
 [![](images/pic10.jpg)](#)
 
@@ -185,30 +325,25 @@ released for free under the [Creative Commons
 Attribution](http://html5up.net/license/) license so feel free to use it
 for any personal or commercial project – just don't forget to credit us!
 
+<footer markdown="1">
+<ul class="actions" markdown="1">
+
 -   [Find out more](#)
 
-Tempus consequat
-----------------
+</ul>
+</footer>
+</section>
+</div>
 
--   [Lorem ipsum dolor sit amet sit veroeros](#)
--   [Sed et blandit consequat sed tlorem blandit](#)
--   [Adipiscing feugiat phasellus sed tempus](#)
--   [Hendrerit tortor vitae mattis tempor sapien](#)
--   [Sem feugiat sapien id suscipit magna felis nec](#)
--   [Elit class aptent taciti sociosqu ad litora](#)
-
-Ipsum et phasellus
-------------------
-
--   [Lorem ipsum dolor sit amet sit veroeros](#)
--   [Sed et blandit consequat sed tlorem blandit](#)
--   [Adipiscing feugiat phasellus sed tempus](#)
--   [Hendrerit tortor vitae mattis tempor sapien](#)
--   [Sem feugiat sapien id suscipit magna felis nec](#)
--   [Elit class aptent taciti sociosqu ad litora](#)
+<div class="col-4 col-12-medium" markdown="1">
+<section markdown="1">
+<header markdown="1">
 
 Vitae tempor lorem
 ------------------
+
+</header>
+<ul class="social" markdown="1">
 
 -   [Facebook](#)
 -   [Twitter](#)
@@ -226,9 +361,22 @@ Vitae tempor lorem
 
     [someone@untitled.tld](#)
 
--   ### Phone
+</ul>
+</section>
+</div>
 
-    ​(800) 000-0000
+<div class="col-12" markdown="1">
+<div id="copyright" markdown="1">
+<ul class="links" markdown="1">
 
 -   © Untitled. All rights reserved.
 -   Design: [HTML5 UP](http://html5up.net)
+
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</div>
