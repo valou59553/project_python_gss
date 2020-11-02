@@ -37,7 +37,7 @@ def convert_and_create_static_site():
     # try/catch pour créer un dossier nommé par le arg2, un fichier .html nommé par le arg1 rempli avec le .md + création d'un dossier 'assets'
     try:
         os.mkdir('../%s'%(sys.argv[2]))
-        with open('../%s/site.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
+        with open('../%s/index.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
             record.write(fichier_html)
         os.mkdir('../%s/assets'%(sys.argv[2]))
 
