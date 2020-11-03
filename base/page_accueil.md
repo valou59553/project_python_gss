@@ -346,6 +346,9 @@ Vitae tempor lorem
 -   [LinkedIn](#){: class="icon brands fa-linkedin-in"}
 -   [Autre](#){: class="icon brands fa-tumblr"}
 
+</ul>
+<ul class="contact" markdown="1">
+
 -   ### Address
 
     Untitled Incorporated\
