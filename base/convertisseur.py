@@ -1,11 +1,12 @@
 from markdown import markdown
-import os, sys
+import os, sys, shutil
 
 def convert_and_create_static_site():
     # ouverture du fichier .md rentré dans le cmd en arg1, lecture et traduction
     with open(str(sys.argv[1]),'r', encoding="utf-8") as record:
         texte_fichier_md = record.read()
-    texte_md_traduit = markdown(texte_fichier_md, extensions=['extra', 'codehilite', 'toc', 'sane_lists','md_in_html'])
+    texte_md_traduit = markdown(texte_fichier_md, extensions=['extra', 'codehilite', 'toc', 'sane_lists','md_in_html'
+                                                            ,'attr_list'])
 
     # si fichier = 'page_accueil.md' récupérer son css
     if sys.argv[1] == "page_accueil.md":
@@ -36,13 +37,13 @@ def convert_and_create_static_site():
     
     # try/catch pour créer un dossier nommé par le arg2, un fichier .html nommé par le arg1 rempli avec le .md + création d'un dossier 'assets'
     try:
-        os.mkdir('../%s'%(sys.argv[2]))
-        with open('../%s/index.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
-            record.write(fichier_html)
-        os.mkdir('../%s/assets'%(sys.argv[2]))
-
         # si arg1 = 'page_accueil.md' créer un dossier css et y mettre les css correspondant.
         if sys.argv[1] == "page_accueil.md":
+            src = './images'
+            dst = '../%s/assets/images'%(sys.argv[2])
+            #copie dossier images dans le nouveau dossier généré 
+            shutil.copytree(src=src ,dst=dst)
+            # copier fichiers .css pour ce site
             os.mkdir('../%s/assets/css'%(sys.argv[2]))
             with open('../%s/assets/css/hilite.css'%(sys.argv[2]),'w') as record:
                 record.write(hilite_css)
@@ -50,6 +51,16 @@ def convert_and_create_static_site():
                 record.write(main_css)
             with open('../%s/assets/css/fontawesome-all.min.css'%(sys.argv[2]),'w') as record:
                 record.write(font_css)
+            # os.mkdir('../%s'%(sys.argv[2]))
+            with open('../%s/index.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
+                record.write(fichier_html)
+            # os.mkdir('../%s/assets'%(sys.argv[2]))
+
+        else :         
+            os.mkdir('../%s'%(sys.argv[2]))
+            with open('../%s/index.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
+                record.write(fichier_html)
+            os.mkdir('../%s/assets'%(sys.argv[2]))
 
     # renvoie l'erreur si présente
     except OSError as e:

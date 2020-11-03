@@ -7,7 +7,7 @@
 <nav id="nav" markdown="1">
 <ul markdown="1">
 
--   [Home](index.html)
+-   [Home](index.html){: class="current"}
 -   [Dropdown](#)
 -   [Left Sidebar](left-sidebar.html)
 
@@ -67,12 +67,12 @@ magna tempus.
 </section>
 </div>
 </div>
-<footer>
+<footer markdown="1">
 
 <ul class="actions" markdown="1">
 
--   [Get Started](#)
--   [Learn More](#)
+-   [Get Started](#){: class="button large"}
+-   [Learn More](#){: class="button alt large"}
 
 </ul>
 
@@ -99,7 +99,7 @@ My Portfolio
 <div class="col-4 col-6-medium col-12-small" markdown="1">
 <section class="box" markdown="1">
 
-[![](images/pic02.jpg)](#)
+[![](assets/images/pic02.jpg)](#){: class="image featured"}
 
 <header markdown="1">
 
@@ -114,7 +114,7 @@ ipsum lorem dolore.
 <footer markdown="1">
 <ul class="actions" markdown="1">
 
--   [Find out more](#)
+-   [Find out more](#){: class="button alt"}
 
 </ul>
 </footer>
@@ -124,7 +124,7 @@ ipsum lorem dolore.
 <div class="col-4 col-6-medium col-12-small" markdown="1">
 <section class="box" markdown="1">
 
-[![](images/pic03.jpg)](#)
+[![](assets/images/pic03.jpg)](#){: class="image featured"}
 
 <header markdown="1">
 
@@ -139,7 +139,7 @@ ipsum lorem dolore.
 <footer markdown="1">
 <ul class="actions" markdown="1">
 
--   [Find out more](#)
+-   [Find out more](#){: class="button alt"}
 
 </ul>
 </footer>
@@ -149,7 +149,7 @@ ipsum lorem dolore.
 <div class="col-4 col-6-medium col-12-small" markdown="1">
 <section class="box" markdown="1">
 
-[![](images/pic04.jpg)](#)
+[![](assets/images/pic04.jpg)](#){: class="image featured"}
 
 <header markdown="1">
 
@@ -164,7 +164,7 @@ ipsum lorem dolore.
 <footer markdown="1">
 <ul class="actions" markdown="1">
 
--   [Find out more](#)
+-   [Find out more](#){: class="button alt"}
 
 </ul>
 </footer>
@@ -188,7 +188,7 @@ The Blog
 <div class="col-6 col-12-small" markdown="1">
 <section class="box" markdown="1">
 
-[![](images/pic08.jpg)](#)
+[![](assets/images/pic08.jpg)](#){: class="image featured"}
 
 <header markdown="1">
 
@@ -207,8 +207,8 @@ tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna
 felis nec elit. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos lorem ipsum dolor sit amet.
 
--   [Continue Reading](#)
--   [33 comments](#)
+-   [Continue Reading](#){: class="button icon solid fa-file-alt"}
+-   [33 comments](#){: class="button alt icon solid fa-comment"}
 
 </ul>
 </footer>
@@ -218,7 +218,7 @@ conubia nostra, per inceptos lorem ipsum dolor sit amet.
 <div class="col-6 col-12-small" markdown="1">
 <section class="box" markdown="1">
 
-[![](images/pic09.jpg)](#)
+[![](assets/images/pic09.jpg)](#){: class="image featured"}
 
 <header markdown="1">
 
@@ -237,8 +237,8 @@ conubia nostra, per inceptos lorem ipsum dolor sit amet.
 </footer markdown="1">
 <ul class="actions" markdown="1">
 
--   [Continue Reading](#)
--   [33 comments](#)
+-   [Continue Reading](#){: class="button icon solid fa-file-alt"}
+-   [33 comments](#){: class="button alt icon solid fa-comment"}
 
 </ul>
 </footer>
@@ -250,10 +250,6 @@ conubia nostra, per inceptos lorem ipsum dolor sit amet.
 </div>
 </section>
 
-<!-- footer -->
-<!-- footer -->
-<!-- footer -->
-<!-- footer -->
 <!-- footer -->
 
 <section id="footer" markdown="1">
@@ -269,35 +265,35 @@ Blandit nisl adipiscing
 </header>
 <ul class="dates" markdown="1">
 
--   Jan **27**
+-   Jan **27**{: class="date"}
 
     ### [Lorem dolor sit amet veroeros](#)
 
     Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus
     lorem consequat etiam.
 
--   Jan **23**
+-   Jan **23**{: class="date"}
 
     ### [Ipsum sed blandit nisl consequat](#)
 
     Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit
     adipiscing feugiat lorem.
 
--   Jan **15**
+-   Jan **15**{: class="date"}
 
     ### [Magna tempus lorem feugiat](#)
 
     Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam
     sed amet sit consequat.
 
--   Jan **12**
+-   Jan **12**{: class="date"}
 
     ### [Dolore tempus ipsum feugiat nulla](#)
 
     Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet
     nullam consequat.
 
--   Jan **10**
+-   Jan **10**{: class="date"}
 
     ### [Blandit tempus aliquam?](#)
 
@@ -309,15 +305,15 @@ Blandit nisl adipiscing
 </div>
 
 <div class="col-4 col-12-medium" markdown="1">
-<section mardkdown="1">
+<section markdown="1">
 <header markdown="1">
 
-What's this all about?
-----------------------
+My Portfolio
+------------
 
 </header>
 
-[![](images/pic10.jpg)](#)
+[![](assets/images/pic10.jpg)](#){: class="image featured"}
 
 This is **Dopetrope** a free, fully responsive HTML5 site template by
 [AJ](http://twitter.com/ajlkn) for [HTML5 UP](http://html5up.net/) It's
@@ -328,7 +324,7 @@ for any personal or commercial project – just don't forget to credit us!
 <footer markdown="1">
 <ul class="actions" markdown="1">
 
--   [Find out more](#)
+-   [Find out more](#){: class="button"}
 
 </ul>
 </footer>
@@ -345,11 +341,10 @@ Vitae tempor lorem
 </header>
 <ul class="social" markdown="1">
 
--   [Facebook](#)
--   [Twitter](#)
--   [Dribbble](#)
--   [Tumblr](#)
--   [LinkedIn](#)
+-   [Facebook](#){: class="icon brands fa-facebook-f"}
+-   [Twitter](#){: class="icon brands fa-twitter"}
+-   [LinkedIn](#){: class="icon brands fa-linkedin-in"}
+-   [Autre](#){: class="icon brands fa-tumblr"}
 
 -   ### Address
 
