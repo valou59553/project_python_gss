@@ -1,11 +1,11 @@
 from markdown import markdown
 import os, sys, shutil, glob, webbrowser
-from function_git import push_on_git
+from function_maj import maj_git, maj_pqt
 from jinja2 import Environment, FileSystemLoader
 
 env = {'source': sys.argv[1], 'destination': sys.argv[2]}
 
-def main():    
+def open_website():    
     # open website on github, page index.html
     url = 'https://valou59553.github.io/project_python_gss/%s/index.html'%(env['destination'])
     webbrowser.open_new(url)
@@ -52,6 +52,7 @@ def convert_and_create_static_site(env):
         print(os.strerror(e.errno))
  
 # appel de fonctions
+maj_pqt()
 convert_and_create_static_site(env)
-push_on_git()
-main()
+maj_git()
+open_website()
