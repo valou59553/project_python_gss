@@ -1,36 +1,50 @@
 from markdown import markdown
-import os, sys, shutil
+import os, sys, shutil, glob
 from jinja2 import Environment, FileSystemLoader
 
-def convert_and_create_static_site():
+env = {'source': sys.argv[1], 'destination': sys.argv[2]}
+
+def change_extension(path, extension='.md'):
+    return path.replace(extension, '').replace('./%s/'%(env['source']),'')
+
+def create_folder(subfolder_name):
+        src = './%s'%(subfolder_name)
+        dst = '../%s/assets/%s'%(env['destination'], subfolder_name)   
+        shutil.copytree(src=src ,dst=dst)    
+
+def convert_and_create_static_site(env):
     # ouverture du fichier .md rentré dans le cmd en arg1, lecture et conversion
-    with open(str(sys.argv[1]),'r', encoding="utf-8") as record:
-        texte_fichier_md = record.read()
-    texte_md_traduit = markdown(texte_fichier_md, extensions=['extra', 'codehilite', 'toc', 'sane_lists','md_in_html'
-                                                            ,'attr_list'])
-    
-    # utilisation de jinja pour inserer le contenu du fichier traduit .md dans le body du fichier template.html
-    env = Environment(loader=FileSystemLoader(searchpath='./'))
-    template = env.get_template('template.html')
-    fichier_html = template.render(texte_md_traduit=texte_md_traduit)
-    
+    dossier_selection = glob.glob("./%s/*.md"%(sys.argv[1]))
+    res = []
+    for record in dossier_selection:  
+        with open(record,'r', encoding="utf-8") as f:
+            texte_fichier_md = f.read()
+        res.append(markdown(texte_fichier_md, extensions=['extra','codehilite','toc','sane_lists','md_in_html','attr_list']))
+
+    # enleve les .md et le chemin du fichier pour donner un nom lors de la création des fichiers .html
+    name_files_end = []
+    for record in dossier_selection: 
+        name_files_end.append(change_extension(record))
+
     # try/catch pour créer un dossier nommé par l'arg2, un fichier .html + création du dossier 'assets'
     try:
         # prendre le contenu des dossier images et css pour les replacer dans un assets dans le dossier 'arg2'
-        src = './images'
-        dst = '../%s/assets/images'%(sys.argv[2])   
-        shutil.copytree(src=src ,dst=dst)
+        create_folder('images')
+        create_folder('css')
 
-        src = './css'
-        dst = '../%s/assets/css'%(sys.argv[2]) 
-        shutil.copytree(src=src ,dst=dst)
-        # création du .html dans le dossier 'arg2'
-        with open('../%s/index.html'%(sys.argv[2]),'w', encoding ="utf-8") as record:
-            record.write(fichier_html)
+        # utilisation de jinja pour inserer le contenu du fichier traduit .md dans le body du fichier template.html
+        template = Environment(loader=FileSystemLoader(searchpath='./')).get_template('template.html')
+        fichier_html = []
+        for i in range(len(dossier_selection)):
+            fichier_html.append(template.render(texte_md_traduit = res[i]))
+            # création du .html dans le dossier 'arg2'
+            with open('../%s/%s.html'%(env['destination'], name_files_end[i]),'w', encoding ="utf-8") as record:
+                record.write(fichier_html[i])
 
     # renvoie l'erreur si présente
     except OSError as e:
         print(os.strerror(e.errno))
  
 # appel de fonction
-convert_and_create_static_site()
+
+convert_and_create_static_site(env)
