@@ -9,7 +9,7 @@ def main():
     
     # The reloader has not yet run - open the browser
     if not os.environ.get("WERKZEUG_RUN_MAIN"):
-        url = 'http://www.project_python_gss.com/%s/'%(env['destination'])
+        url = 'https://valou59553.github.io/project_python_gss/%s/'%(env['destination'])
         webbrowser.open_new(url)
 
 def change_name_files(path, extension='.md'):
