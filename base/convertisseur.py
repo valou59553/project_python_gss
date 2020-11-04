@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 env = {'source': sys.argv[1], 'destination': sys.argv[2]}
 
 def main():    
-    # open website on github 
+    # open website on github, page index.html
     if not os.environ.get("WERKZEUG_RUN_MAIN"):
         url = 'https://valou59553.github.io/project_python_gss/%s/index.html'%(env['destination'])
         webbrowser.open_new(url)
