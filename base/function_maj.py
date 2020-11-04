@@ -9,4 +9,4 @@ def maj_git():
 def maj_pqt():
     subprocess.run("sudo apt-get upgrade", shell=True)
     subprocess.run("pip install -r requirements.txt", shell=True)
-    subprocess.run("pip3 install -r requirements.txt", shell=True) 
+    subprocess.run("pip3 install -r requirements.txt", shell=True)

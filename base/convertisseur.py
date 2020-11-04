@@ -3,6 +3,7 @@ import os, sys, shutil, glob, webbrowser
 from function_maj import maj_git, maj_pqt
 from jinja2 import Environment, FileSystemLoader
 
+# define var env for source and destination
 env = {'source': sys.argv[1], 'destination': sys.argv[2]}
 
 def open_website():    
