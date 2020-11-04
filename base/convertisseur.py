@@ -1,11 +1,16 @@
 from markdown import markdown
 import os, sys, shutil, glob, webbrowser
+from function_git import push_on_git
 from jinja2 import Environment, FileSystemLoader
-from flask import Flask
-
-app = Flask(__name__)
 
 env = {'source': sys.argv[1], 'destination': sys.argv[2]}
+
+def main():
+    
+    # The reloader has not yet run - open the browser
+    if not os.environ.get("WERKZEUG_RUN_MAIN"):
+        url = 'https://valou59553.github.io/project_python_gss/%s'%(env['destination'])
+        webbrowser.open_new(url)
 
 def change_name_files(path, extension='.md'):
     return path.replace(extension, '').replace('./%s/'%(env['source']),'')
@@ -48,17 +53,7 @@ def convert_and_create_static_site(env):
     except OSError as e:
         print(os.strerror(e.errno))
  
-# appel de fonction
+# appel de fonctions
 convert_and_create_static_site(env)
-
-# def main():
-    
-#     # The reloader has not yet run - open the browser
-#     if not os.environ.get("WERKZEUG_RUN_MAIN"):
-#         webbrowser.open_new('http://127.0.0.1:8000/')
-
-#     # Otherwise, continue as normal
-#     app.run(host="127.0.0.1", port=8000)
-
-# if __name__ == '__main__':
-#     main()
+push_on_git()
+main()
