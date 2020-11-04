@@ -1,16 +1,19 @@
 from markdown import markdown
-import os, sys, shutil, glob
+import os, sys, shutil, glob, webbrowser
 from jinja2 import Environment, FileSystemLoader
+from flask import Flask
+
+app = Flask(__name__)
 
 env = {'source': sys.argv[1], 'destination': sys.argv[2]}
 
-def change_extension(path, extension='.md'):
+def change_name_files(path, extension='.md'):
     return path.replace(extension, '').replace('./%s/'%(env['source']),'')
 
 def create_folder(subfolder_name):
         src = './%s'%(subfolder_name)
         dst = '../%s/assets/%s'%(env['destination'], subfolder_name)   
-        shutil.copytree(src=src ,dst=dst)    
+        shutil.copytree(src=src ,dst=dst)
 
 def convert_and_create_static_site(env):
     # ouverture du fichier .md rentré dans le cmd en arg1, lecture et conversion
@@ -24,7 +27,7 @@ def convert_and_create_static_site(env):
     # enleve les .md et le chemin du fichier pour donner un nom lors de la création des fichiers .html
     name_files_end = []
     for record in dossier_selection: 
-        name_files_end.append(change_extension(record))
+        name_files_end.append(change_name_files(record))
 
     # try/catch pour créer un dossier nommé par l'arg2, un fichier .html + création du dossier 'assets'
     try:
@@ -46,5 +49,16 @@ def convert_and_create_static_site(env):
         print(os.strerror(e.errno))
  
 # appel de fonction
-
 convert_and_create_static_site(env)
+
+def main():
+    
+    # The reloader has not yet run - open the browser
+    if not os.environ.get("WERKZEUG_RUN_MAIN"):
+        webbrowser.open_new('http://127.0.0.1:8000/')
+
+    # Otherwise, continue as normal
+    app.run(host="127.0.0.1", port=8000)
+
+if __name__ == '__main__':
+    main()
