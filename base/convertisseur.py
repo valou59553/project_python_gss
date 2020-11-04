@@ -51,14 +51,14 @@ def convert_and_create_static_site(env):
 # appel de fonction
 convert_and_create_static_site(env)
 
-def main():
+# def main():
     
-    # The reloader has not yet run - open the browser
-    if not os.environ.get("WERKZEUG_RUN_MAIN"):
-        webbrowser.open_new('http://127.0.0.1:8000/')
+#     # The reloader has not yet run - open the browser
+#     if not os.environ.get("WERKZEUG_RUN_MAIN"):
+#         webbrowser.open_new('http://127.0.0.1:8000/')
 
-    # Otherwise, continue as normal
-    app.run(host="127.0.0.1", port=8000)
+#     # Otherwise, continue as normal
+#     app.run(host="127.0.0.1", port=8000)
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
