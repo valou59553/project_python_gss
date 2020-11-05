@@ -1,3 +1,4 @@
+<body class="homepage" markdown="1">
 <div id="page-wrapper" markdown="1">
 <section id="header" markdown="1">
 
@@ -378,3 +379,4 @@ Vitae tempor lorem
 </div>
 </section>
 </div>
+</body>
