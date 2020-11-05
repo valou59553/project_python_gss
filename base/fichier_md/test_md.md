@@ -1,6 +1,4 @@
-okkkk
-
-<!-- ---
+---
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
@@ -11,6 +9,7 @@ __Advertisement :)__
 You will like those projects!
 
 ---
+
 
 <div markdown="1" class="header10">
 
@@ -193,6 +192,5 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 *[HTML]: Hyper Text Markup Language
 
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
-</div> -->
+</div>
