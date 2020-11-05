@@ -21,7 +21,7 @@ def create_folder(subfolder_name):
 
 def convert_and_create_static_site(env):
     # ouverture du fichier .md rentré dans le cmd en arg1, lecture et conversion
-    dossier_selection = glob.glob("./%s/*.md"%(sys.argv[1]))
+    dossier_selection = glob.glob("./%s/*.md"%(env['source']))
     res = []
     for record in dossier_selection:  
         with open(record,'r', encoding="utf-8") as f:
