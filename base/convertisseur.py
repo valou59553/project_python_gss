@@ -26,7 +26,7 @@ def convert_and_create_static_site(env):
     for record in dossier_selection:  
         with open(record,'r', encoding="utf-8") as f:
             texte_fichier_md = f.read()
-        res.append(markdown(texte_fichier_md, extensions=['extra','codehilite','toc','sane_lists','md_in_html','attr_list']))
+        res.append(markdown(texte_fichier_md, extensions=['extra','codehilite','toc','sane_lists','md_in_html','attr_list','smarty']))
 
     # enleve les .md et le chemin du fichier pour donner un nom lors de la création des fichiers .html
     name_files_end = []

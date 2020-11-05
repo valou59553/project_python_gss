@@ -13,7 +13,7 @@ You will like those projects!
 <div markdown="1" class="header10">
 
 
-# h1 Heading 8-)
+# h1 Heading
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
@@ -169,8 +169,6 @@ The killer feature of `markdown-it` is very effective support of
 ### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
 
 > Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
 
 see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
