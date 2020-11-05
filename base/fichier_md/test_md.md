@@ -89,8 +89,6 @@ Start numbering with offset:
 
 ## Code
 
-Inline `code`
-
 Indented code
 
     // Some comments
@@ -138,9 +136,6 @@ Right aligned columns
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
 ## Images
 
 ![Minion](https://octodex.github.com/images/minion.png)
@@ -160,25 +155,6 @@ With a reference later in the document defining the URL location:
 The killer feature of `markdown-it` is very effective support of
 [syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
 ### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
 ==Marked text==
@@ -193,10 +169,6 @@ Footnote 2 link[^second].
 Inline footnote^[Text of inline footnote] definition.
 
 Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
 
 [^second]: Footnote text.
 
@@ -216,16 +188,6 @@ Term 2 with *inline markup*
 
     Third paragraph of definition 2.
 
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
 ### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 
 This is HTML abbreviation example.
@@ -235,9 +197,5 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 *[HTML]: Hyper Text Markup Language
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
 
 </div>
