@@ -61,4 +61,4 @@ def convert_and_create_static_site(env):
 maj_pqt()
 convert_and_create_static_site(env)
 maj_git()
-# open_website()
+open_website()
