@@ -4,16 +4,21 @@ from function_maj import maj_git, maj_pqt
 from jinja2 import Environment, FileSystemLoader
 
 # define var env for source and destination
-env = {'source': sys.argv[1], 'destination': sys.argv[2]}
+if os.path.isdir('./%s'%sys.argv[1]) is True:
+    env = {'source': sys.argv[1], 'destination': sys.argv[2]}
+else:
+    pass 
 
 def open_website():    
     # open website on github, page index.html
     url = 'https://valou59553.github.io/project_python_gss/%s/index.html'%(env['destination'])
     webbrowser.open_new(url)
 
+# fonction change name pour les nom de fichiers
 def change_name_files(path, extension='.md'):
     return path.replace(extension, '').replace('./%s/'%(env['source']),'')
 
+# fonction pour créer les dossiers présent de base au nouveau dossier
 def create_folder(subfolder_name):
         src = './%s'%(subfolder_name)
         dst = '../%s/assets/%s'%(env['destination'], subfolder_name)   
@@ -56,4 +61,4 @@ def convert_and_create_static_site(env):
 maj_pqt()
 convert_and_create_static_site(env)
 maj_git()
-open_website()
+# open_website()
