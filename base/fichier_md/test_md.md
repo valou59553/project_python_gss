@@ -137,6 +137,8 @@ Right aligned columns
 
 [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
+[link test](index.md)
+
 ## Images
 
 ![Minion](https://octodex.github.com/images/minion.png)
