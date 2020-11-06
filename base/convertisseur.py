@@ -20,9 +20,9 @@ def change_name_files(path, extension='.md'):
 
 # fonction pour créer les dossiers présent de base au nouveau dossier
 def create_folder(subfolder_name):
-        src = './%s'%(subfolder_name)
-        dst = '../%s/assets/%s'%(env['destination'], subfolder_name)   
-        shutil.copytree(src=src ,dst=dst)
+    src = './%s'%(subfolder_name)
+    dst = '../%s/assets/%s'%(env['destination'], subfolder_name)   
+    shutil.copytree(src=src ,dst=dst)
 
 def convert_and_create_static_site(env):
     # ouverture du fichier .md rentré dans le cmd en arg1, lecture et conversion
